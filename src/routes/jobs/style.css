@@ -1,0 +1,32 @@
+.jobs {
+  margin: 0 auto;
+  margin-top: 125px;
+  min-height: 100%;
+  padding: 20px 0;
+  padding-left: 120px;
+  width: 90%;
+}
+.article {
+  background-color: #fff;
+  color: #444;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px 0;
+  padding: 15px;
+}
+.article h2 {
+  margin: 0;
+  width: 100%;
+}
+.article h3 {
+  font-size: 16px;
+  margin: 10px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+.article p {
+  width: 100%;
+}
+.header {
+  color: #fff;
+}
