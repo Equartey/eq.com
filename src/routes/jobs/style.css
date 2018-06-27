@@ -6,6 +6,9 @@
   padding-left: 120px;
   width: 90%;
 }
+.jobs .react-reveal {
+  width: 100%;
+}
 .article {
   background-color: #fff;
   color: #444;

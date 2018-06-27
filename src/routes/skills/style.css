@@ -5,9 +5,13 @@
   margin-top: 125px;
   min-height: 100%;
   padding: 20px 0;
-  padding-top: 0;
+  padding-bottom: 150px;
   padding-left: 120px;
+  padding-top: 0;
   width: 90%;
+}
+.skills .react-reveal {
+  width: 25%;
 }
 .card__title,
 .card {
@@ -15,7 +19,6 @@
   margin: 20px;
   padding: 20px;
   text-align: center;
-  width: calc(25% - 40px);
 }
 .card__title {
   text-align: left;

@@ -7,6 +7,8 @@ import tint from '@fortawesome/fontawesome-pro-light/faTint';
 import cube from '@fortawesome/fontawesome-pro-light/faCube';
 import server from '@fortawesome/fontawesome-pro-light/faServer';
 import calendar from '@fortawesome/fontawesome-pro-light/faCalendarAlt';
+import branch from '@fortawesome/fontawesome-pro-light/faCodeBranch';
+import vials from '@fortawesome/fontawesome-pro-light/faVials';
 
 fontawesome.library.add(brands, desktop);
 
@@ -33,6 +35,10 @@ export const SkillList = [
 	{
 		skill: 'Gulp',
 		icon: ['fab', 'gulp']
+	},
+	{
+		skill: 'End to End Testing',
+		icon: vials
 	},
 	{
 		skill: 'Webpack',
@@ -100,8 +106,8 @@ export const SkillList = [
 		icon: calendar
 	},
 	{
-		skill: 'UI/UX Design',
-		icon: desktop
+		skill: 'Git',
+		icon: branch
 	},
 	{
 		skill: 'UI/UX Design',

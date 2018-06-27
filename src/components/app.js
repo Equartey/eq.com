@@ -14,7 +14,17 @@ export default class App extends Component {
 	 */
 	handleRoute = e => {
 		this.currentUrl = e.url;
+		this.setState({
+			bgAinmation: this.currentUrl === '/'
+		});
 	};
+
+	constructor(props) {
+		super(props);
+		this.state = {
+			bgAinmation: this.currentUrl
+		};
+	}
 
 	render() {
 		return (

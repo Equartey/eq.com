@@ -23,25 +23,25 @@ const pages = [
 	}
 ];
 const placeholder = () => {
-	// let i = 0;
-	// clearTimeout(timedLoop);
-	// const timedLoop = () => {
-	// 	setTimeout(() => {
-	// 		document.getElementsByClassName(
-	// 			'react-autosuggest__input'
-	// 		)[0].placeholder =
-	// 			pages[i].name;
-	// 		i++;
-	// 		if (i < pages.length - 1) {
-	// 			timedLoop();
-	// 		}
-	// 		else {
-	// 			i = 0;
-	// 			timedLoop();
-	// 		}
-	// 	}, 1500);
-	// };
-	// timedLoop();
+	let i = 0;
+	clearTimeout(timedLoop);
+	const timedLoop = () => {
+		setTimeout(() => {
+			document.getElementsByClassName(
+				'react-autosuggest__input'
+			)[0].placeholder =
+				pages[i].name;
+			i++;
+			if (i < pages.length - 1) {
+				timedLoop();
+			}
+			else {
+				i = 0;
+				timedLoop();
+			}
+		}, 1500);
+	};
+	timedLoop();
 };
 
 // Teach Autosuggest how to calculate suggestions for any given input value.
