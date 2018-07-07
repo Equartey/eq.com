@@ -1,7 +1,7 @@
 html,
 body {
   color: #444;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-weight: 400;
   margin: 0;
   min-height: 100%;
@@ -26,8 +26,8 @@ body {
     rgba(146, 189, 238, 1) 100%
   );
   background-size: 200% 200%;
-  animation: Gradient 15s ease infinite;
-  -webkit-animation: Gradient 15s ease infinite;
+  animation: Gradient 5s ease infinite;
+  -webkit-animation: Gradient 5s ease infinite;
 }
 * {
   box-sizing: border-box;
@@ -83,7 +83,7 @@ body {
   border: 1px solid #fff;
   box-shadow: none;
   color: #fff;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 28px;
   height: 50px;
   padding-left: 15px;
@@ -113,6 +113,7 @@ body {
   border: 0;
   font-size: 28px;
   height: 50px;
+  margin-top: 1px;
   pointer-events: none;
   position: absolute;
   left: 0;
@@ -170,5 +171,27 @@ body {
   }
   100% {
     background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .react-autosuggest__container {
+    margin: 1px;
+    width: 100%;
+  }
+  .search__thumb {
+    width: 100%;
+  }
+  .search__wrap {
+    flex-wrap: wrap;
+    top: 10%;
+  }
+  .search__wrap--tucked {
+    flex-wrap: nowrap;
+  }
+  .search__wrap--tucked .search__thumb {
+    margin-top: 1px;
+    margin-right: 5px;
+    width: 50px;
   }
 }

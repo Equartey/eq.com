@@ -4,6 +4,7 @@ import { Router } from 'preact-router';
 import Search from './search';
 import Home from '../routes/home';
 import Skills from '../routes/skills';
+import Social from '../routes/social';
 import Jobs from '../routes/jobs';
 
 export default class App extends Component {
@@ -35,6 +36,7 @@ export default class App extends Component {
 					<Home path="/" />
 					<Jobs path="/jobs/" />
 					<Skills path="/skills" />
+					<Social path="/social" />
 				</Router>
 			</div>
 		);

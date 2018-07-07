@@ -1,22 +1,27 @@
-.skills {
+.social {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 125px;
-  min-height: 100%;
   padding: 20px 0;
   padding-bottom: 150px;
   padding-left: 120px;
   padding-top: 0;
   width: 90%;
 }
-.skills .react-reveal {
+.social .react-reveal {
   width: 25%;
+}
+.card__link {
+  color: #444;
+  margin: 20px;
+  text-decoration: none;
+}
+.card__link:hover {
 }
 .card__title,
 .card {
   background-color: #fff;
-  margin: 20px;
   padding: 20px;
   text-align: center;
 }
@@ -34,9 +39,8 @@
   height: 100px;
   width: 100% !important;
 }
-
 @media (max-width: 768px) {
-  .skills {
+  .social {
     padding-left: 0;
   }
 }

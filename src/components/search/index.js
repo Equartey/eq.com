@@ -10,13 +10,13 @@ const pages = [
 		name: 'skills'
 	},
 	{
+		name: 'social'
+	},
+	{
 		name: 'home'
 	},
 	{
 		name: 'jobs'
-	},
-	{
-		name: 'me'
 	},
 	{
 		name: ''
@@ -147,7 +147,7 @@ export default class Search extends React.Component {
 
 		// Autosuggest will pass through all these props to the input.
 		const inputProps = {
-			placeholder: 'Jobs, Skills, Home',
+			placeholder: 'Home',
 			value,
 			onChange: this.onChange
 		};
