@@ -1,7 +1,7 @@
 # eq.com
 
 My website/portfolio. Built with Preact.js
-elijahquartey.com
+https://elijahquartey.com
 
 ## CLI Commands
 
