@@ -2,7 +2,12 @@ language: node_js
 node_js:
   - "node"
 
-script: npm run build
+jobs:
+  include:
+    - stage: install
+      script: npm install
+    - stage: build
+      script: npm run build
 
 deploy:
   provider: surge
