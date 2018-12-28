@@ -23,7 +23,6 @@
     "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.0",
     "jest": "^21.2.1",
-    "preact-cli": "^2.2.1",
     "preact-render-spy": "^1.2.1"
   },
   "dependencies": {
@@ -32,6 +31,7 @@
     "@fortawesome/fontawesome-pro-light": "^5.0.13",
     "@fortawesome/react-fontawesome": "0.0.20",
     "preact": "^8.4.2",
+    "preact-cli": "^2.2.1",
     "preact-compat": "^3.18.4",
     "preact-router": "^2.5.7",
     "react-autosuggest": "^9.4.2",
