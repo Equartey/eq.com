@@ -8,8 +8,7 @@ import style from './style.css';
 
 export default class Skills extends Component {
 	state = {
-		skills: SkillList,
-		mounted: true
+		skills: SkillList
 	};
 	render() {
 		const SkillCards = this.state.skills.map((s, i) => {
@@ -21,20 +20,22 @@ export default class Skills extends Component {
 				);
 			}
 			return (
-				<Fade cascade delay={50 * i}>
-					<div>
-						<div key={i} className={style.card}>
-							<FontAwesomeIcon class={style.card__svg} icon={s.icon} />
-							<p>{s.skill}</p>
-						</div>
-					</div>
-				</Fade>
+				<div key={i} className={style.card}>
+					<FontAwesomeIcon class={style.card__svg} icon={s.icon} />
+					<p>{s.skill}</p>
+				</div>
 			);
 		});
 		return (
-			<TransitionGroup>
-				<div class={style.skills}>{SkillCards}</div>
-			</TransitionGroup>
+			<div class={style.container}>
+				<TransitionGroup>
+					<Fade delay={50} left>
+						<div>
+							<div class={style.skills}>{SkillCards}</div>
+						</div>
+					</Fade>
+				</TransitionGroup>
+			</div>
 		);
 	}
 }

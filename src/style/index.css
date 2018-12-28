@@ -81,6 +81,7 @@ body {
   transform: translateY(-33.33%);
   transition: top 500ms ease, opacity 500ms ease, transform 500ms ease,
     width 500ms ease;
+  z-index: 1000;
 }
 .search__wrap--tucked {
   animation: largeSearch 500ms;

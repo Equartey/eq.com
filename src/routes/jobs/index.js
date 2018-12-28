@@ -24,7 +24,7 @@ export default class Jobs extends Component {
 	// Note: `user` comes from the URL, courtesy of our router
 	render() {
 		const jobsCards = this.state.jobs.map((j, i) => (
-			<Slide left cascade delay={150 * i}>
+			<Slide left>
 				<div>
 					<article class={style.article}>
 						<h2>{j.name}</h2>

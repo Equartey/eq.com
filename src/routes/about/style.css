@@ -138,14 +138,15 @@
     flex-wrap: nowrap;
   }
   .img {
-    height: 70vh;
+    /* height: 70vh; */
+    height: 100%;
     width: 50%;
   }
   .img__img {
     object-fit: cover;
   }
   .info {
-    height: 70vh;
+    /* height: 70vh; */
     margin-left: 20px;
     margin-top: 0;
     width: 50%;
