@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-  - "node"
+  - "stable"
 
-jobs:
-  include:
-    - stage: install
-      script: npm install
-    - stage: build
-      script: npm run build
+script:
+  - npm install
+  - npm run build
 
 deploy:
   provider: surge
   project: ./build/
+
+on:
+  branch: master
