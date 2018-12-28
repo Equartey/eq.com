@@ -1,7 +1,14 @@
 language: node_js
 node_js:
-  - "node"
+  - "stable"
+
+script:
+  - npm install
+  - npm run build
 
 deploy:
   provider: surge
   project: ./build/
+
+on:
+  branch: master
