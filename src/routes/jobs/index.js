@@ -1,7 +1,7 @@
 import { h, Component } from 'preact';
 import React from 'preact-compat';
 import TransitionGroup from 'react-transition-group/TransitionGroup';
-import Slide from 'react-reveal/Slide';
+import Fade from 'react-reveal/Fade';
 import { JobsList } from './jobs';
 import style from './style';
 
@@ -24,20 +24,22 @@ export default class Jobs extends Component {
 	// Note: `user` comes from the URL, courtesy of our router
 	render() {
 		const jobsCards = this.state.jobs.map((j, i) => (
-			<Slide left>
-				<div>
-					<article class={style.article}>
-						<h2>{j.name}</h2>
-						<h3>{j.title}</h3>
-						<p>{j.desc}</p>
-					</article>
-				</div>
-			</Slide>
+			<div>
+				<article class={style.article}>
+					<h2>{j.name}</h2>
+					<h3>{j.title}</h3>
+					<p>{j.desc}</p>
+				</article>
+			</div>
 		));
 		return (
-			<TransitionGroup>
-				<div className={` ${style.jobs}`}>{jobsCards}</div>
-			</TransitionGroup>
+			<div className={` ${style.jobs}`}>
+				<TransitionGroup>
+					<Fade delay={500} right>
+						<div>{jobsCards}</div>
+					</Fade>
+				</TransitionGroup>
+			</div>
 		);
 	}
 }

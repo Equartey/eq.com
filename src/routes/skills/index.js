@@ -29,7 +29,7 @@ export default class Skills extends Component {
 		return (
 			<div class={style.container}>
 				<TransitionGroup>
-					<Fade delay={50} left>
+					<Fade delay={500} right>
 						<div>
 							<div class={style.skills}>{SkillCards}</div>
 						</div>

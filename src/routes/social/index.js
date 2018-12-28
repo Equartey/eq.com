@@ -21,19 +21,21 @@ export default class Social extends Component {
 				);
 			}
 			return (
-				<Fade cascade delay={50 * i}>
-					<a className={style.card__link} href={s.href} target="_blank">
-						<div key={i} className={style.card}>
-							<FontAwesomeIcon class={style.card__svg} icon={s.icon} />
-							<p>{s.skill}</p>
-						</div>
-					</a>
-				</Fade>
+				<a className={style.card__link} href={s.href} target="_blank">
+					<div key={i} className={style.card}>
+						<FontAwesomeIcon class={style.card__svg} icon={s.icon} />
+						<p>{s.skill}</p>
+					</div>
+				</a>
 			);
 		});
 		return (
 			<TransitionGroup>
-				<div class={style.social}>{SocialCards}</div>
+				<Fade delay={500} right>
+					<div className={style.container}>
+						<div class={style.social}>{SocialCards}</div>
+					</div>
+				</Fade>
 			</TransitionGroup>
 		);
 	}

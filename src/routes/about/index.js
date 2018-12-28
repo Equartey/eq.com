@@ -56,7 +56,7 @@ export default class About extends Component {
 		let isMobile = window.innerWidth < 768;
 		return (
 			<TransitionGroup>
-				<Fade delay={50} left>
+				<Fade delay={500} right>
 					<div>
 						<div class={style.about}>
 							<div class={style.banner}>
