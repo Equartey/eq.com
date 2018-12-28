@@ -24,7 +24,7 @@ export default class About extends Component {
 					size: 'cover'
 				},
 				outdoors: {
-					mobile: 'desert_sun_sm.jpg',
+					mobile: 'desert_sun_tall.jpg',
 					desktop: 'desert_sun_tall.jpg',
 					size: 'cover'
 				},
@@ -57,9 +57,6 @@ export default class About extends Component {
 		return (
 			<TransitionGroup>
 				<div class={style.about}>
-					<div class={style.about__title}>
-						<h1>About</h1>
-					</div>
 					<div class={style.banner}>
 						<div class={style.img}>
 							<div
