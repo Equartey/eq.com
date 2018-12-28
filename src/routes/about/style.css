@@ -1,0 +1,164 @@
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-top: 95px;
+  padding: 20px 0;
+  padding-bottom: 0;
+  padding-left: 120px;
+  padding-top: 0;
+  width: 90%;
+}
+.about .react-reveal {
+  width: 25%;
+}
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.img__img {
+  height: 100%;
+  width: 100%;
+  transition: filter 0.2s ease;
+  object-fit: scale-down;
+  background: #fff;
+}
+.img:hover {
+  filter: grayscale(0);
+}
+.img__full {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.img__half {
+  position: relative;
+  height: 50%;
+}
+.img {
+  height: 400px;
+  width: 100%;
+}
+.img__quarter {
+  position: relative;
+  height: 25%;
+}
+.img__sides {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-right: 20px;
+  width: 25%;
+}
+.info {
+  background-color: #fff;
+  /* height: calc(40vh - 25px); */
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+}
+.info__defintion {
+  font-style: italic;
+  font-size: 20px;
+}
+.info__defintion_sub {
+  font-size: 20px;
+  line-height: 150%;
+}
+.info__title {
+  color: #444;
+  font-size: 36px;
+  line-height: 115%;
+  margin-bottom: 5px;
+  margin-top: 0;
+}
+.info__pronounce {
+  color: #444;
+  font-size: 24px;
+  margin-bottom: 25px;
+  margin-top: 0;
+}
+.info__switch {
+  cursor: pointer;
+  /* font-size: 24px; */
+  font-weight: bold;
+  margin-left: 5px;
+  position: relative;
+}
+.info__switch:after {
+  background-color: #000000;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  right: 0;
+}
+.card__link {
+  color: #444;
+  margin: 20px;
+  text-decoration: none;
+}
+.card__link:hover {
+}
+.about__title,
+.card {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+.about__title {
+  text-align: left;
+  margin: 50px 0 20px 0;
+  padding: 0 20px;
+  width: 100%;
+}
+.about__title:first-of-type {
+  margin-top: 0;
+}
+
+.card > svg {
+  height: 100px;
+  width: 100% !important;
+}
+@media (max-width: 768px) {
+  .about {
+    padding-left: 0;
+  }
+}
+@media (min-width: 768px) {
+  .banner {
+    flex-wrap: nowrap;
+  }
+  .img {
+    height: 70vh;
+    width: 50%;
+  }
+  .img__img {
+    object-fit: cover;
+  }
+  .info {
+    height: 70vh;
+    margin-left: 20px;
+    margin-top: 0;
+    width: 50%;
+  }
+  .info__title {
+    font-size: 56px;
+  }
+}
+@media (min-width: 1200px) {
+  .img {
+    width: 33.33%;
+  }
+  .info {
+    width: 66.67%;
+  }
+}

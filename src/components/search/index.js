@@ -7,13 +7,16 @@ import Typing, { Backspace, Delay, Reset, Speed } from 'react-typing-animation';
 // Imagine you have a list of pages that you'd like to autosuggest.
 const pages = [
 	{
+		name: 'about'
+	},
+	{
+		name: 'home'
+	},
+	{
 		name: 'skills'
 	},
 	{
 		name: 'social'
-	},
-	{
-		name: 'home'
 	},
 	{
 		name: 'jobs'
@@ -99,12 +102,13 @@ export default class Search extends React.Component {
 	componentDidMount() {
 		placeholder();
 	}
-
+	/*eslint-disable */
 	onChange = (event, { newValue }) => {
 		this.setState({
 			value: newValue
 		});
 	};
+	/*eslint-enable */
 
 	goHome = () => {
 		this.setState({

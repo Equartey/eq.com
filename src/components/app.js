@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Search from './search';
+import About from '../routes/about';
 import Home from '../routes/home';
 import Skills from '../routes/skills';
 import Social from '../routes/social';
@@ -18,6 +19,7 @@ export default class App extends Component {
 		this.setState({
 			bgAinmation: this.currentUrl === '/'
 		});
+		document.activeElement.blur();
 	};
 
 	constructor(props) {
@@ -34,7 +36,8 @@ export default class App extends Component {
 				<Search />
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />
-					<Jobs path="/jobs/" />
+					<About path="/about" />
+					<Jobs path="/jobs" />
 					<Skills path="/skills" />
 					<Social path="/social" />
 				</Router>

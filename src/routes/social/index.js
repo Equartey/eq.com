@@ -12,7 +12,6 @@ export default class Social extends Component {
 		mounted: true
 	};
 	render() {
-		console.log(style);
 		const SocialCards = this.state.social.map((s, i) => {
 			if (s.title) {
 				return (
