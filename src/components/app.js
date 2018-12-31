@@ -19,7 +19,8 @@ export default class App extends Component {
 		this.setState({
 			bgAinmation: this.currentUrl === '/'
 		});
-		document.activeElement.blur();
+		// handle pre-render of DOM varibles
+		if (typeof document !== 'undefined') document.activeElement.blur();
 	};
 
 	constructor(props) {
