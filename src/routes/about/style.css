@@ -1,6 +1,4 @@
 .about {
-  display: flex;
-  flex-wrap: wrap;
   margin: 0 auto;
   margin-top: 95px;
   padding: 20px 0;
@@ -8,15 +6,6 @@
   padding-left: 120px;
   padding-top: 0;
   width: 90%;
-}
-.about .react-reveal {
-  width: 25%;
-}
-.banner {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  width: 100%;
 }
 .img__img {
   height: 100%;
@@ -58,7 +47,8 @@
 }
 .info {
   background-color: #fff;
-  /* height: calc(40vh - 25px); */
+  height: auto;
+  margin-bottom: 20px;
   margin-top: 20px;
   padding: 20px;
   width: 100%;
@@ -101,6 +91,11 @@
   width: 100%;
   right: 0;
 }
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .card__link {
   color: #444;
   margin: 20px;
@@ -134,12 +129,11 @@
   }
 }
 @media (min-width: 768px) {
-  .banner {
+  .inner {
     flex-wrap: nowrap;
   }
   .img {
-    /* height: 70vh; */
-    height: 100%;
+    height: auto;
     width: 50%;
   }
   .img__img {
