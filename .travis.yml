@@ -13,6 +13,7 @@ script:
 deploy:
   provider: surge
   project: ./build/
+  domain: elijahquartey.com
 
 on:
   branch: master
