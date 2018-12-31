@@ -56,11 +56,11 @@ export default class About extends Component {
 		let windowExists = typeof window !== 'undefined';
 		let isMobile = windowExists ? window.innerWidth < 768 : null;
 		return (
-			<TransitionGroup>
-				<Fade delay={500} right>
-					<div>
-						<div class={style.about}>
-							<div class={style.banner}>
+			<div class={style.about}>
+				<TransitionGroup>
+					<Fade delay={500} right>
+						<div>
+							<div class={style.inner}>
 								<div class={style.img}>
 									<div
 										class={style.img__full}
@@ -140,9 +140,9 @@ export default class About extends Component {
 								</div>
 							</div>
 						</div>
-					</div>
-				</Fade>
-			</TransitionGroup>
+					</Fade>
+				</TransitionGroup>
+			</div>
 		);
 	}
 }
