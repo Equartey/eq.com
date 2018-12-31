@@ -1,5 +1,6 @@
 import React from 'preact-compat';
 import Autosuggest from 'react-autosuggest';
+import Autowhatever from 'react-autowhatever';
 import { route } from 'preact-router';
 import { Link } from 'preact-router/match';
 import Typing, { Backspace, Delay, Reset, Speed } from 'react-typing-animation';
@@ -27,20 +28,23 @@ const pages = [
 ];
 const placeholder = () => {
 	let i = 0;
+
 	clearTimeout(timedLoop);
 	const timedLoop = () => {
 		setTimeout(() => {
-			document.getElementsByClassName(
-				'react-autosuggest__input'
-			)[0].placeholder =
-				pages[i].name;
-			i++;
-			if (i < pages.length - 1) {
-				timedLoop();
-			}
-			else {
-				i = 0;
-				timedLoop();
+			// handle pre-render of DOM varibles
+			if (typeof document !== 'undefined') {
+				document.getElementsByClassName(
+					'react-autosuggest__input'
+				)[0].placeholder = pages[i].name;
+				i++;
+				if (i < pages.length - 1) {
+					timedLoop();
+				}
+				else {
+					i = 0;
+					timedLoop();
+				}
 			}
 		}, 1500);
 	};
@@ -87,6 +91,7 @@ const renderSuggestion = (suggestion, { query, isHighlighted }) => {
 export default class Search extends React.Component {
 	constructor() {
 		super();
+		let windowExists = typeof window !== 'undefined';
 		// Autosuggest is a controlled component.
 		// This means that you need to provide an input value
 		// and an onChange handler that updates this value (see below).
@@ -95,7 +100,7 @@ export default class Search extends React.Component {
 		this.state = {
 			value: '',
 			suggestions: [],
-			tucked: window.location.pathname !== '/',
+			tucked: windowExists ? window.location.pathname !== '/' : '/',
 			placeholder: false
 		};
 	}
@@ -146,6 +151,12 @@ export default class Search extends React.Component {
 		route(`/${newUrl}`);
 	};
 
+	renderInputComponent = inputProps => (
+		<div>
+			<Autowhatever inputProps={inputProps} items={[]} />
+		</div>
+	);
+
 	render() {
 		const { value, suggestions } = this.state;
 
@@ -195,6 +206,7 @@ export default class Search extends React.Component {
 					getSuggestionValue={getSuggestionValue}
 					renderSuggestion={renderSuggestion}
 					inputProps={inputProps}
+					renderInputComponent={this.renderInputComponent}
 				/>
 				<div
 					className={`search__placeholder ${

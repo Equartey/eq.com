@@ -53,7 +53,8 @@ export default class About extends Component {
 		}));
 	};
 	render() {
-		let isMobile = window.innerWidth < 768;
+		let windowExists = typeof window !== 'undefined';
+		let isMobile = windowExists ? window.innerWidth < 768 : null;
 		return (
 			<TransitionGroup>
 				<Fade delay={500} right>
