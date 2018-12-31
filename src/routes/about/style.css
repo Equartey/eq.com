@@ -1,6 +1,7 @@
 .about {
   margin: 0 auto;
   margin-top: 95px;
+  margin-bottom: 20px;
   padding: 20px 0;
   padding-bottom: 0;
   padding-left: 120px;
@@ -48,7 +49,6 @@
 .info {
   background-color: #fff;
   height: auto;
-  margin-bottom: 20px;
   margin-top: 20px;
   padding: 20px;
   width: 100%;
