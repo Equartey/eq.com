@@ -1,9 +1,10 @@
+/* eslint-disable react/jsx-no-bind */
 import React from 'preact-compat';
 import Autosuggest from 'react-autosuggest';
 import Autowhatever from 'react-autowhatever';
 import { route } from 'preact-router';
 import { Link } from 'preact-router/match';
-import Typing, { Backspace, Delay, Reset, Speed } from 'react-typing-animation';
+import Typing, { Delay, Reset, Speed } from 'react-typing-animation';
 
 // Imagine you have a list of pages that you'd like to autosuggest.
 const pages = [
@@ -122,6 +123,14 @@ export default class Search extends React.Component {
 		});
 	};
 
+	goToPage = page => {
+		this.setState({
+			value: page,
+			tucked: true
+		});
+		route(`/${page}`);
+	};
+
 	togglePlaceHolder = () => {
 		this.setState({
 			placeholder: !placeholder
@@ -215,6 +224,22 @@ export default class Search extends React.Component {
 				>
 					{AnimatedTypingComponent}
 				</div>
+				{true && (
+					<div class="navWrap">
+						<div class="navButton" onClick={() => this.goToPage('jobs')}>
+							<h2 class="navTitle">Jobs</h2>
+						</div>
+						<div class="navButton" onClick={() => this.goToPage('skills')}>
+							<h2 class="navTitle">Skills</h2>
+						</div>
+						<div class="navButton" onClick={() => this.goToPage('about')}>
+							<h2 class="navTitle">About</h2>
+						</div>
+						<div class="navButton" onClick={() => this.goToPage('social')}>
+							<h2 class="navTitle">Social</h2>
+						</div>
+					</div>
+				)}
 			</div>
 		);
 	}

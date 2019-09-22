@@ -13,10 +13,10 @@ export default class About extends Component {
 			activeImage: 'elijah',
 			images: {
 				// Desktop: 530x680 | Mobile 690x450
-				blenderbottle: {
-					mobile: 'bb.png',
-					desktop: 'bb.png',
-					size: 'contain'
+				'imagine learning': {
+					mobile: 'IL-logo.png',
+					desktop: 'IL-logo.png',
+					size: 'auto'
 				},
 				elijah: {
 					mobile: 'elijah.jpeg',
@@ -39,8 +39,8 @@ export default class About extends Component {
 					size: 'contain'
 				},
 				thrills: {
-					mobile: 'jeep_moab_big.jpg',
-					desktop: 'jeep_moab_big.jpg',
+					mobile: 'rappelling.jpg',
+					desktop: 'rappelling.jpg',
 					size: 'cover'
 				}
 			}
@@ -89,12 +89,12 @@ export default class About extends Component {
 									<p class={style.info__defintion}>noun</p>
 									<ol class={style.info__defintion_sub}>
 										<li>
-											Web Developer at
+											Software Engineer at
 											<span
 												class={style.info__switch}
 												onClick={this.SwitchImage}
 											>
-												BlenderBottle
+												Imagine Learning
 											</span>
 										</li>
 										<li>

@@ -71,6 +71,7 @@ body {
   animation: smallSearch 500ms;
   animation-fill-mode: forwards;
   display: flex;
+  flex-wrap: wrap;
   position: absolute;
   left: 0;
   right: 0;
@@ -98,6 +99,7 @@ body {
   color: #ddd;
 }
 .react-autosuggest__container {
+  flex: 1 0 0;
   margin: 1px;
   margin-left: 20px;
   position: relative;
@@ -181,11 +183,49 @@ body {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }
-/* .card .card__svg {
-  height: 100px;
-  width: 100%;
-} */
 
+.navButton {
+  align-items: center;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex: 1 0 calc(50% - 10px);
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.navTitle {
+  text-decoration: none;
+  color: #444;
+  padding: 10px;
+}
+.navWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  width: calc(100% - 110px);
+}
+.search__wrap--tucked .react-autosuggest__container {
+  flex: 0 0 30%;
+}
+.search__wrap--tucked .navButton {
+  flex: 1 0 calc(25% - 10px);
+  height: 51px;
+  padding: 0;
+  width: auto;
+}
+.search__wrap--tucked .navTitle {
+  margin: 0;
+  padding: 0;
+}
+.search__wrap--tucked .navWrap {
+  flex: 1 0 auto;
+  flex-wrap: nowrap;
+  padding: 0;
+  width: auto;
+}
 @keyframes Gradient {
   0% {
     background-position: 0% 50%;
@@ -218,5 +258,10 @@ body {
     margin-top: 1px;
     margin-right: 5px;
     width: 50px;
+  }
+  .navWrap {
+    padding-top: 10px;
+    padding-right: 10px;
+    width: 100%;
   }
 }

@@ -9,6 +9,8 @@ import server from '@fortawesome/fontawesome-pro-light/faServer';
 import calendar from '@fortawesome/fontawesome-pro-light/faCalendarAlt';
 import branch from '@fortawesome/fontawesome-pro-light/faCodeBranch';
 import vials from '@fortawesome/fontawesome-pro-light/faVials';
+import gem from '@fortawesome/fontawesome-pro-light/faGem';
+import diagram from '@fortawesome/fontawesome-pro-light/faProjectDiagram';
 
 fontawesome.library.add(brands, desktop);
 
@@ -20,9 +22,22 @@ export const SkillList = [
 		skill: 'Javascript',
 		icon: ['fab', 'js']
 	},
+
+	{
+		skill: 'Ruby',
+		icon: gem
+	},
 	{
 		skill: 'React',
 		icon: ['fab', 'react']
+	},
+	{
+		skill: 'GraphQL',
+		icon: diagram
+	},
+	{
+		skill: 'Angular',
+		icon: ['fab', 'angular']
 	},
 	{
 		skill: 'Nodejs',
@@ -33,11 +48,11 @@ export const SkillList = [
 		icon: sync
 	},
 	{
-		skill: 'Gulp',
-		icon: ['fab', 'gulp']
+		skill: 'Jenkins CI/CD',
+		icon: ['fab', 'jenkins']
 	},
 	{
-		skill: 'End to End Testing',
+		skill: 'Jasmine Testing',
 		icon: vials
 	},
 	{
@@ -66,6 +81,10 @@ export const SkillList = [
 	},
 	{
 		title: 'Programming Languages'
+	},
+	{
+		skill: 'C++',
+		icon: ['fab', 'windows']
 	},
 	{
 		skill: 'C#',

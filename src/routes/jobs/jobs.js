@@ -1,5 +1,17 @@
 export const JobsList = [
 	{
+		name: 'Imagine Learning',
+		title: 'Software Engineer',
+		desc:
+			'Delivered 76 Angular pages derived from a legacy Ruby on Rails app in 90 days on a team of four engineers. Wrote unit tests to move code coverage from below 60% to over 80% between three distinct code repos. Insured key stakeholder requirements through weekly succinct agile meetings.'
+	},
+	{
+		name: 'Imagine Learning',
+		title: 'Software Engineer in Test',
+		desc:
+			'Wrote automated unit, integration, and end-to-end tests for a legacy Ruby on Rails application. Provided quality assurance on front-end pull requests under the mentorship of a Senior Test Engineer.'
+	},
+	{
 		name: 'BlenderBottle',
 		title: 'Web Developer',
 		desc:
